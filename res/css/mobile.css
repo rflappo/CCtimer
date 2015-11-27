@@ -1,0 +1,45 @@
+@font-face{
+    font-family: "Nimbus-Mono-L";
+    src: url('../fonts/ufonts.com_nimbus-mono-l-regular.ttf'),
+    url('../fonts/ufonts.com_nimbus-mono-l-regular,ttf'); /* IE */
+}
+
+#container1{
+    color: #f0f0e7;
+    font-size: 175%;
+    font-family: "Nimbus-Mono-L";
+}
+#container2{
+    color: #485c4c;
+    font-size: 175%;
+    font-family: "Nimbus-Mono-L";
+}
+
+.avatar{
+    height: 125%;
+}
+
+#startStopBtn{
+    background: #2b2f26;
+    position: fixed;
+    border-radius: 0 50% 50% 0;
+}
+
+#configBtn{
+    background: #2b2f26;
+    position: fixed;
+    border-radius: 50% 0 0 50%;
+}
+
+.rotatePortrait {
+/* Safari */
+    -webkit-transform: rotate(180deg);
+/* Firefox */
+    -moz-transform: rotate(180deg);
+/* IE */
+    -ms-transform: rotate(180deg);
+/* Opera */
+    -o-transform: rotate(180deg);
+/* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
