@@ -78,7 +78,7 @@ function mobilePortraitResponsiveStyler(){
     buttonRight.style.width = containersHeight / 3 + "px";
     buttonRight.style.top = (containersHeight - containersHeight / 6) + "px";
     buttonRight.style.left = (containersWidth - (containersHeight /3 * 0.70)) + "px";
-    buttonRight.style.overflowX = "hiden";
+    buttonRight.style.overflowX = "hidden";
     buttonRight.style.zIndex = 10;
     
 }

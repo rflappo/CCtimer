@@ -1,0 +1,50 @@
+@font-face{
+    font-family: "Amiri";
+    src: url('../fonts/amiri-regular.ttf'),
+    url('../fonts/amiri-regular.ttf'); /* IE */
+}
+
+select{
+    color: #111;
+}
+
+#configPanel{
+    opacity: 0.9;
+    background: #111;
+    position: fixed;
+    font-family: "Amiri";
+    /* border-radius: 5% 5% 5% 5%; */
+}
+
+    #headerPanel{
+        text-align: center;
+        background: #262923;
+        color: #f0f0e7;
+        padding-top: 2%;
+    }
+    #timeConfigPanel{
+        background: #111;
+        padding-top: 2%;
+        color: #f0f0e7;
+    }
+        #tcp-timeOptions{
+            color: #f0f0e7;
+            position: relative;
+        }
+            #timeNumber{
+                color: #111;
+                position: relative;
+                text-align: right;
+            }
+            #timeMetrics{
+                color: #111;
+                text-align: center;
+                position: relative;
+                vertical-align: middle;
+            }
+    #playersConfigPanel{
+        background: #111;
+    }
+    #footerPanel{ /* Estaría bueno hacer dos span acá, para utilizarlos como botones. */
+        background: #262923;
+    }

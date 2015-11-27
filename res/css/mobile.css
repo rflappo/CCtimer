@@ -1,7 +1,7 @@
 @font-face{
     font-family: "Nimbus-Mono-L";
     src: url('../fonts/ufonts.com_nimbus-mono-l-regular.ttf'),
-    url('../fonts/ufonts.com_nimbus-mono-l-regular,ttf'); /* IE */
+    url('../fonts/ufonts.com_nimbus-mono-l-regular.ttf'); /* IE */
 }
 
 #container1{
@@ -20,20 +20,21 @@
 }
 
 #startStopBtn{
-    background: #2b2f26;
+    background: #111;
     position: fixed;
     border-radius: 0 50% 50% 0;
 }
 #startStopBtn:hover{
-    background: #111;
-}
-#configBtn{
     background: #2b2f26;
+}
+
+#configBtn{
+    background: #111;
     position: fixed;
     border-radius: 50% 0 0 50%;
 }
 #configBtn:hover{
-    background: #111;
+    background: #2b2f26;
 }
 
 .rotatePortrait {
