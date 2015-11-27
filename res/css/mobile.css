@@ -24,11 +24,16 @@
     position: fixed;
     border-radius: 0 50% 50% 0;
 }
-
+#startStopBtn:hover{
+    background: #111;
+}
 #configBtn{
     background: #2b2f26;
     position: fixed;
     border-radius: 50% 0 0 50%;
+}
+#configBtn:hover{
+    background: #111;
 }
 
 .rotatePortrait {
