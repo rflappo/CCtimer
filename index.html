@@ -11,31 +11,113 @@
     <link rel="stylesheet" href="res/css/mobile.css">
 </head>
 
-<body>
-    
-	<div class="text-center" id="container1">
-        <div class="" id="horsePlayer1"><img class="avatar" src="res/img/whiteHorse-Right.png" style="" alt=""></div>
-        <div class="" id="timerPlayer1"><span id="minutesPlayer1">30</span>:<span id="secondsPlayer1">00</span></div>
-        <div class="" id="namePlayer1">Flappo</div>
-	</div>
+<body onload="Init()">
+    <div id="mainClock">
+        <div class="text-center" id="container1">
+           <div class="" id="horsePlayer1"><img class="avatar" src="res/img/whiteHorse-Right.png" style="" alt=""></div>
+           <div class="" id="timerPlayer1"><span id="minutesPlayer1">30</span>:<span id="secondsPlayer1">00</span></div>
+           <div class="" id="namePlayer1">Player1</div>
+        </div>
    
-    <div id="startStopBtn">
-       
-	</div>
-	<div id="configBtn">
-	    
-	</div>
+        <div id="startStopBtn" style="text-align: center;">
+          <i id="startStopBtn-icon">alarm_on</i>
+        </div>
+        <div id="configBtn" style="text-align: center;">
+	       <i id="configBtn-icon">settings</i>
+        </div>
 	
-	<div class="text-center" id="container2">
-        <div class="" id="horsePlayer2"><img class="avatar" src="res/img/blackHorse-Right.png" style="" alt=""></div>
-        <div class="" id="timerPlayer2"><span id="minutesPlayer2">30</span>:<span id="secondsPlayer2">00</span></div>
-        <div class="" id="namePlayer2">Ramiro</div>
+        <div class="text-center" id="container2">
+           <div class="" id="horsePlayer2"><img class="avatar" src="res/img/blackHorse-Right.png" style="" alt=""></div>
+           <div class="" id="timerPlayer2"><span id="minutesPlayer2">30</span>:<span id="secondsPlayer2">00</span></div>
+           <div class="" id="namePlayer2">Player2</div>
+        </div>
+    </div>
+	<!-- Need to insert the configPanel.html content -->
+    <div id="configPanel">
+        <div id="headerPanel">Game Settings</div>
+        
+        <div id="timeConfigPanel">
+            <i id= "timeConfigPanel-titleImg">access_alarm</i>
+            <span id="timeConfigPanel-titleText">Timer Settings</span>
+            <div id="tcp-timeOptions">
+                <div>
+                    <span>Playing Time: </span><span style="padding-left: 3%;"><input id="timeNumber" type="number" min="1"></span>
+                                                           <span style="padding-left: 3%;"><select id="timeMetrics">
+                                                            <option value="minutes">Minutes</option>
+                                                            <option value="seconds">Seconds</option>
+                                                        </select></span>
+                </div>
+                <div id="bonusTimeConfigOptions" style="vertical-align: middle; padding-top: 1%;">
+                    <input type="checkbox" id="chkBonusTime" name="bonusTime" onchange="toggleBonusConfig()">
+                    <span>Bonus Time:</span>
+                    <span style="padding-left: 2%;"><input id="bonusTimeNumber" type="number" min="1"></span>
+                    <span style="padding-left: 2%;"><select id="bonusTimeMetrics">
+                                                            <option value="minutes">Minutes</option>
+                                                            <option value="seconds">Seconds</option>
+                                                        </select>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="separator">
+        
+        <div id="playersConfigPanel" class="playersConfigPanel">
+            <span id="spanConfigPanel">
+                <div class="playerConfigPanel" id="player1ConfigPanel">
+                    <i id= "player1ConfigPanel-titleImg">person</i>
+                    <span id="player1ConfigPanel-titleText">Player1:</span>
+                    <div id="player1Config">
+                        <span>Name: </span><span style="padding-left: 3%;"><input id="player1Name" type="text"></span>
+                    </div>
+               </div>
+               <br>
+               <div class="playerConfigPanel" id="player2ConfigPanel">
+                   <i id= "player2ConfigPanel-titleImg">person</i>
+                   <span id="player2ConfigPanel-titleText">Player2:</span>
+                   <div id="player2Config">
+                        <span>Name: </span><span style="padding-left: 3%;"><input id="player2Name" type="text"></span>
+                    </div>
+               </div>
+            </span>
+            <span id="spanGameConfigPanel">
+                <div id="sgcp-titleText">Game Config</div>
+                <div id="sgcp-colorConfig">
+                    <div id="sgcp-whitesConfig">
+                        <span id="whitesLabel">Whites: </span>
+                        <span style="padding-left: 3%;"><select id="colorDesignation1" onchange="onColorSelectionChoice(this)">
+                                                            <option value="player1">Player1</option>
+                                                            <option value="player2">Player2</option>
+                                                        </select></span>
+                    </div>
+                    <br>
+                    <div id="sgcp-blacksConfig">
+                        <span id="blacksLabel">Blacks: </span>
+                        <span style="padding-left: 3%;"><select id="colorDesignation2" onChange="onColorSelectionChoice(this)">
+                                                            <option value="player2">Player2</option>
+                                                             <option value="player1">Player1</option>
+                                                        </select></span>
+                    </div>
+                </div>
+            </span>
+        </div>
+
+        <div id="footerPanel">
+            <div id="btnOkAll" style="text-align: center;">
+                <i id="btnOkAll-icon">done_all</i>
+            </div>
+            <div id="btnCancelAll" style="text-align: center;">
+                <i id="btnCancelAll-icon">close</i>
+            </div>
+        </div>
 	</div>
-
-	<script res="res/js/jquery.min.js"></script>
-	<script res="res/js/bootstrap.min.js"></script>
-
+    
+	<script src="res/js/jquery.min.js"></script>
+	<script src="res/js/bootstrap.min.js"></script>
 	<script src="res/js/styler.js"></script>
+	<script src="res/js/funConfigPanel.js"></script>
+
+	
 </body>
 
 </html>

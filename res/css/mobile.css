@@ -3,7 +3,28 @@
     src: url('../fonts/ufonts.com_nimbus-mono-l-regular.ttf'),
     url('../fonts/ufonts.com_nimbus-mono-l-regular.ttf'); /* IE */
 }
+@font-face{
+    font-family: "Amiri";
+    src: url('../fonts/amiri-regular.ttf'),
+    url('../fonts/amiri-regular.ttf'); /* IE */
+}
 
+@font-face{
+    font-family: "GoogleMaterial";
+    src: url('../fonts/MaterialIcons-Regular.ttf'),
+    url('../fonts/MaterialIcons-Regular.ttf'); /* IE */
+}
+select{
+    color: #111;
+}
+
+i{
+    font-family: "GoogleMaterial";
+    font-style: normal;
+}
+.separator{
+    width: 85%;
+}
 #container1{
     color: #f0f0e7;
     font-size: 175%;
@@ -23,20 +44,31 @@
     background: #111;
     position: fixed;
     border-radius: 0 50% 50% 0;
+    text-align: right;
+    padding-top: 5%;
 }
 #startStopBtn:hover{
     background: #2b2f26;
+}
+#startStopBtn-icon{
+    margin-right: -10%;
+    color: azure;
 }
 
 #configBtn{
     background: #111;
     position: fixed;
     border-radius: 50% 0 0 50%;
+    text-align: right;
+    padding-top: 5%;
 }
 #configBtn:hover{
     background: #2b2f26;
 }
-
+#configBtn-icon{
+    margin-right: 15%;
+    color: azure;
+}
 .rotatePortrait {
 /* Safari */
     -webkit-transform: rotate(180deg);
@@ -49,3 +81,104 @@
 /* Internet Explorer */
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
+
+
+#configPanel{
+    opacity: 0.9;
+    background: #111;
+    position: fixed;
+    font-family: "Amiri";
+    color: #f0f0e7;
+    z-index: 11;
+    /* border-radius: 5% 5% 5% 5%; */
+}
+
+    #headerPanel{
+        text-align: center;
+        background: #262923;
+        color: #f0f0e7;
+        position: relative;
+        padding-top: 3%;
+    }
+    #timeConfigPanel{
+        background: #111;
+        color: #f0f0e7;
+        padding-top: 2%;
+        position: relative;
+    }
+        #tcp-timeOptions{
+            position: relative;
+        }
+            #timeNumber{
+                color: #111;
+                position: relative;
+                text-align: right;
+            }
+            #timeMetrics{
+                color: #111;
+                text-align: center;
+                position: relative;
+                vertical-align: middle;
+            }
+            #bonusTimeNumber{
+                color: #111;
+                position: relative;
+                text-align: right;
+            }
+            #bonusTimeMetrics{
+                color: #111;
+                text-align: center;
+                position: relative;
+                vertical-align: middle;
+            }
+    #playersConfigPanel{
+        background: #111;
+        position: relative;
+    }
+        #spanConfigPanel{
+            width: 50%;
+            float: left;
+        }
+            #player1Config{
+                position: relative;
+            }
+                #player1Name{
+                color: #111;
+                text-align: center;
+            }
+            #player2Config{
+            position: relative;
+        }
+                #player2Name{
+                color: #111;
+                text-align: center;
+            }
+        #spanGameConfigPanel{
+            width: 50%;
+            float: right;
+        }
+            #sgcp-titleText{
+                text-align: left;
+            }
+            #sgcp-colorConfig{
+                position: relative;
+            }
+    #footerPanel{ /* Estaría bueno hacer dos span acá, para utilizarlos como botones. */
+        background: #111;
+    }
+        #btnOkAll{
+            background: #262923;
+            float: left;
+            padding-top: 1%;
+        }
+        #btnOkAll:hover{
+            background: #283125;
+        }
+        #btnCancelAll{
+            background: #262923;
+            float: right;
+            padding-top: 1%;
+        }
+        #btnCancelAll:hover{
+            background: #283125;
+        }
