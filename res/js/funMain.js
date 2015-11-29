@@ -65,6 +65,8 @@ function gameFinnished(strWinner){
     if (strWinner !== ''){
         alert(strWinner + " Won on time!");
     }
+    whitesPlayerPanel.setAttribute("onclick", "");
+    blacksPlayerPanel.setAttribute("onclick", "");
     
     startStopBtn.setAttribute("onclick", "startGame()");
     startStopBtnIcon.innerHTML = "play_arrow";
