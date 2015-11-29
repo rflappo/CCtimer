@@ -58,9 +58,12 @@ function startGame(){
     configBtn.setAttribute("onclick", "");
     configBtn.style.opacity = 0.55;
 }
-function gameFinnished(){
+function gameFinnished(strWinner){
     if (onExecutionTimer !== undefined){
         clearInterval(onExecutionTimer);
+    }
+    if (strWinner !== ''){
+        alert(strWinner + " Won on time!");
     }
     
     startStopBtn.setAttribute("onclick", "startGame()");
@@ -76,7 +79,7 @@ function gameFinnished(){
     
 }
 
-function countDown(timerToId){
+function countDown(timerToId){ // Need to implement the Bonus time!
 
     if (onExecutionTimer !== undefined){
         clearInterval(onExecutionTimer);

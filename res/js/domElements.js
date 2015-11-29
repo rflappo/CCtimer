@@ -1,0 +1,1 @@
+// Acá debería agregar todas las variables que utilizo del DOM; aquellas que los archivos de funcionalidad utilizan.
