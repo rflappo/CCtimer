@@ -25,6 +25,10 @@ function Init(){
     player1Name.value = document.getElementById('namePlayer1').innerHTML;
     player2Name = document.getElementById('player2Name');
     player2Name.value = document.getElementById('namePlayer2').innerHTML;
+    
+    
+    var configPanel = document.getElementById('configPanel');
+    configPanel.style.left = screen.width + "px";
 }
 
 function toggleBonusConfig(){

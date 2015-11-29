@@ -14,6 +14,9 @@
     src: url('../fonts/MaterialIcons-Regular.ttf'),
     url('../fonts/MaterialIcons-Regular.ttf'); /* IE */
 }
+body{
+    background: #111;
+}
 select{
     color: #111;
 }
@@ -42,7 +45,7 @@ i{
 
 #startStopBtn{
     background: #111;
-    position: fixed;
+    position: absolute;
     border-radius: 0 50% 50% 0;
     text-align: right;
     padding-top: 5%;
@@ -56,6 +59,7 @@ i{
 }
 
 #configBtn{
+    position: relative;
     background: #111;
     position: fixed;
     border-radius: 50% 0 0 50%;

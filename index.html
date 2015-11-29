@@ -20,11 +20,11 @@
         </div>
    
         <div id="startStopBtn" style="text-align: center;">
-          <i id="startStopBtn-icon">alarm_on</i>
+          <i id="startStopBtn-icon">play_arrow</i>
         </div>
-        <div id="configBtn" style="text-align: center;">
-	       <i id="configBtn-icon">settings</i>
-        </div>
+        <div id="configBtn" style="text-align: center;" onclick="configBtnClick()">
+	        <i id="configBtn-icon">settings</i>
+        </div>             
 	
         <div class="text-center" id="container2">
            <div class="" id="horsePlayer2"><img class="avatar" src="res/img/blackHorse-Right.png" style="" alt=""></div>
@@ -106,7 +106,7 @@
             <div id="btnOkAll" style="text-align: center;">
                 <i id="btnOkAll-icon">done_all</i>
             </div>
-            <div id="btnCancelAll" style="text-align: center;">
+            <div id="btnCancelAll" style="text-align: center;" onclick="animatedCancelConfiguration()">
                 <i id="btnCancelAll-icon">close</i>
             </div>
         </div>
@@ -115,6 +115,7 @@
 	<script src="res/js/jquery.min.js"></script>
 	<script src="res/js/bootstrap.min.js"></script>
 	<script src="res/js/styler.js"></script>
+	<script src="res/js/funMain.js"></script>
 	<script src="res/js/funConfigPanel.js"></script>
 
 	
