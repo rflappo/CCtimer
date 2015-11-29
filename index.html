@@ -14,20 +14,20 @@
 <body onload="Init()">
     <div id="mainClock">
         <div class="text-center" id="container1">
-           <div class="" id="horsePlayer1"><img class="avatar" src="res/img/whiteHorse-Right.png" style="" alt=""></div>
+           <div class="" id="horsePlayer1"><img id="horseP1Img" class="avatar" src="res/img/whiteHorse-Right.png" style="" alt=""></div>
            <div class="" id="timerPlayer1"><span id="minutesPlayer1">30</span>:<span id="secondsPlayer1">00</span></div>
            <div class="" id="namePlayer1">Player1</div>
         </div>
    
-        <div id="startStopBtn" style="text-align: center;">
+        <div id="startStopBtn" style="text-align: center;" onclick="startGame()">
           <i id="startStopBtn-icon">play_arrow</i>
         </div>
-        <div id="configBtn" style="text-align: center;" onclick="configBtnClick()">
+        <div id="configBtn" style="text-align: center;" onclick="animatedTransitionToConfiguration()">
 	        <i id="configBtn-icon">settings</i>
         </div>             
 	
         <div class="text-center" id="container2">
-           <div class="" id="horsePlayer2"><img class="avatar" src="res/img/blackHorse-Right.png" style="" alt=""></div>
+           <div class="" id="horsePlayer2"><img id="horseP2Img" class="avatar" src="res/img/blackHorse-Right.png" style="" alt=""></div>
            <div class="" id="timerPlayer2"><span id="minutesPlayer2">30</span>:<span id="secondsPlayer2">00</span></div>
            <div class="" id="namePlayer2">Player2</div>
         </div>
@@ -103,10 +103,10 @@
         </div>
 
         <div id="footerPanel">
-            <div id="btnOkAll" style="text-align: center;">
+            <div id="btnOkAll" style="text-align: center;" onclick="acceptAll()">
                 <i id="btnOkAll-icon">done_all</i>
             </div>
-            <div id="btnCancelAll" style="text-align: center;" onclick="animatedCancelConfiguration()">
+            <div id="btnCancelAll" style="text-align: center;" onclick="animatedTransitionToMain()">
                 <i id="btnCancelAll-icon">close</i>
             </div>
         </div>
@@ -115,8 +115,8 @@
 	<script src="res/js/jquery.min.js"></script>
 	<script src="res/js/bootstrap.min.js"></script>
 	<script src="res/js/styler.js"></script>
-	<script src="res/js/funMain.js"></script>
 	<script src="res/js/funConfigPanel.js"></script>
+	<script src="res/js/funMain.js"></script>
 
 	
 </body>
