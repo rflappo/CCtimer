@@ -37,23 +37,7 @@ var timeAmount = 30;
 
 var timeOnMinutes = true;
 function Init(){
-    if (mainPanel.classList.contains("hide")){
-        mainPanel.classList.remove("hide");
-        configPanel.classList.remove("hide");
-    }
-    splashOpacity = 1;
-    onExecutionTimer = setInterval(function (){
-     if (splashOpacity > 0 ){
-        splashOpacity = splashOpacity - 0.035; // no me convencen los tiempos, pero bueno ANDA!
-        mainDiv.style.opacity = splashOpacity;
-        mainText.style.opacity = splashOpacity - 0.65;
-        
-     } else{
-         mainDiv.style.zIndex = -1;
-         clearInterval(onExecutionTimer);
-         onExecutionTimer = undefined;
-     } 
-    }, 100);
+   
     configPanel.style.left = screen.width + "px";
     //Selections tag default selection
     
@@ -85,6 +69,25 @@ function Init(){
         blacksMinutes = mainPlayer2Minutes;
         blacksSeconds = mainPlayer2Seconds;
             blacksPlayerPanel = container2;
+    
+    splashOpacity = 1;
+    responsiveStyler();
+    if (mainPanel.classList.contains("hide")){
+        mainPanel.classList.remove("hide");
+        configPanel.classList.remove("hide");
+    }
+    onExecutionTimer = setInterval(function (){
+     if (splashOpacity > 0 ){
+        splashOpacity = splashOpacity - 0.035; // no me convencen los tiempos, pero bueno ANDA!
+        mainDiv.style.opacity = splashOpacity;
+        mainText.style.opacity = splashOpacity - 0.65;
+        
+     } else{
+         mainDiv.style.zIndex = -1;
+         clearInterval(onExecutionTimer);
+         onExecutionTimer = undefined;
+     } 
+    }, 100);
     
 }
 
