@@ -37,7 +37,26 @@ var timeAmount = 30;
 
 var timeOnMinutes = true;
 function Init(){
+    if (mainPanel.classList.contains("hide")){
+        mainPanel.classList.remove("hide");
+        configPanel.classList.remove("hide");
+    }
+    splashOpacity = 1;
+    onExecutionTimer = setInterval(function (){
+     if (splashOpacity > 0 ){
+        splashOpacity = splashOpacity - 0.035; // no me convencen los tiempos, pero bueno ANDA!
+        mainDiv.style.opacity = splashOpacity;
+        mainText.style.opacity = splashOpacity - 0.65;
+        
+     } else{
+         mainDiv.style.zIndex = -1;
+         clearInterval(onExecutionTimer);
+         onExecutionTimer = undefined;
+     } 
+    }, 100);
+    configPanel.style.left = screen.width + "px";
     //Selections tag default selection
+    
     
     colorDesignation1.selectedIndex = 0;
     colorDesignation2.selectedIndex = 0;
@@ -67,8 +86,6 @@ function Init(){
         blacksSeconds = mainPlayer2Seconds;
             blacksPlayerPanel = container2;
     
-    
-    configPanel.style.left = screen.width + "px";
 }
 
 function toggleBonusConfig(){

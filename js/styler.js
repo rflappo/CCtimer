@@ -116,7 +116,7 @@ function mobilePortraitResponsiveStyler(){
     buttonLeft.style.width = containersHeight / 3 + "px";
     buttonLeft.style.top = (containersHeight - containersHeight / 6) + "px";
     buttonLeft.style.left = 0 - (containersHeight * 0.10) + "px";
-    buttonLeft.style.zIndex = 10;
+    buttonLeft.style.zIndex = 3;
     buttonLeftIcon = document.getElementById('startStopBtn-icon');
     buttonLeftIcon.style.fontSize = (containersHeight / 7) + "px";
     
@@ -125,7 +125,7 @@ function mobilePortraitResponsiveStyler(){
     buttonRight.style.top = (containersHeight - containersHeight / 6) + "px";
     buttonRight.style.left = (containersWidth - (containersHeight /3 * 0.70)) + "px";
     buttonRight.style.overflowX = "hidden";
-    buttonRight.style.zIndex = 10;
+    buttonRight.style.zIndex = 3;
     buttonRightIcon = document.getElementById('configBtn-icon');
     buttonRightIcon.style.fontSize = (containersHeight / 7) + "px";
     
@@ -134,6 +134,7 @@ function mobilePortraitResponsiveStyler(){
 function mobilePortraitResponsiveConfigStyler(){
 //Generics
     
+    configPanel.style.left = screen.width + "px";
     
     panelHeight = 3 * (screen.height / 5);
     panelWidth = screen.width;

@@ -1,0 +1,17 @@
+@font-face{
+    font-family: "CoventryGarden";
+    src: url('../fonts/CoventryGarden.ttf');
+}
+
+#mainSplash{
+    background: #374046;
+    position: fixed;
+    opacity: 1;
+}
+#mainText{
+    position: relative;
+    z-index: 20px;
+    text-align: left;
+    color: #FFFFFF;
+    font-family: "CoventryGarden";
+}

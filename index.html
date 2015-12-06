@@ -4,40 +4,45 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <link rel="stylesheet" media="screen" href="res/css/bootstrap.min.css">
-
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="css/splashWindow.css">
 
 	<!--  -->
-    <link rel="stylesheet" href="res/css/mobile.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/GoogleStyle.css">
 </head>
 
-<body onload="Init()">
-    <div id="mainClock">
+<body onload="logoAnimation()">
+    <div id="mainSplash">
+            <div style="opacity: 0;"id="mainText"></div>
+        </div>
+   
+    <div class="hide"  id="mainClock">
         <div class="text-center" id="container1">
-           <div class="" id="horsePlayer1"><img id="horseP1Img" class="avatar" src="res/img/whiteHorse-Right.png" style="" alt=""></div>
+           <div class="" id="horsePlayer1"><img id="horseP1Img" class="avatar" src="img/whiteHorse-Right.png" style="" alt=""></div>
            <div class="" id="timerPlayer1"><span id="minutesPlayer1">30</span>:<span id="secondsPlayer1">00</span></div>
            <div class="" id="namePlayer1">Player1</div>
         </div>
    
         <div id="startStopBtn" style="text-align: center;" onclick="startGame()">
-          <i id="startStopBtn-icon">play_arrow</i>
+          <i class="material-icons"id="startStopBtn-icon">play_arrow</i>
         </div>
         <div id="configBtn" style="text-align: center;" onclick="animatedTransitionToConfiguration()">
-	        <i id="configBtn-icon">settings</i>
+	        <i class="material-icons"id="configBtn-icon">settings</i>
         </div>             
 	
         <div class="text-center" id="container2">
-           <div class="" id="horsePlayer2"><img id="horseP2Img" class="avatar" src="res/img/blackHorse-Right.png" style="" alt=""></div>
+           <div class="" id="horsePlayer2"><img id="horseP2Img" class="avatar" src="img/blackHorse-Right.png" style="" alt=""></div>
            <div class="" id="timerPlayer2"><span id="minutesPlayer2">30</span>:<span id="secondsPlayer2">00</span></div>
            <div class="" id="namePlayer2">Player2</div>
         </div>
     </div>
 	<!-- Need to insert the configPanel.html content -->
-    <div id="configPanel">
+    <div class="hide" id="configPanel">
         <div id="headerPanel">Game Settings</div>
         
         <div id="timeConfigPanel">
-            <i id= "timeConfigPanel-titleImg">access_alarm</i>
+            <i class="material-icons"id= "timeConfigPanel-titleImg">access_alarm</i>
             <span id="timeConfigPanel-titleText">Timer Settings</span>
             <div id="tcp-timeOptions">
                 <div>
@@ -65,7 +70,7 @@
         <div id="playersConfigPanel" class="playersConfigPanel">
             <span id="spanConfigPanel">
                 <div class="playerConfigPanel" id="player1ConfigPanel">
-                    <i id= "player1ConfigPanel-titleImg">person</i>
+                    <i class="material-icons"id= "player1ConfigPanel-titleImg">person</i>
                     <span id="player1ConfigPanel-titleText">Player1:</span>
                     <div id="player1Config">
                         <span>Name: </span><span style="padding-left: 3%;"><input id="player1Name" type="text"></span>
@@ -73,7 +78,7 @@
                </div>
                <br>
                <div class="playerConfigPanel" id="player2ConfigPanel">
-                   <i id= "player2ConfigPanel-titleImg">person</i>
+                   <i class="material-icons"id= "player2ConfigPanel-titleImg">person</i>
                    <span id="player2ConfigPanel-titleText">Player2:</span>
                    <div id="player2Config">
                         <span>Name: </span><span style="padding-left: 3%;"><input id="player2Name" type="text"></span>
@@ -104,19 +109,23 @@
 
         <div id="footerPanel">
             <div id="btnOkAll" style="text-align: center;" onclick="acceptAll()">
-                <i id="btnOkAll-icon">done_all</i>
+                <i class="material-icons"id="btnOkAll-icon">done_all</i>
             </div>
             <div id="btnCancelAll" style="text-align: center;" onclick="animatedTransitionToMain()">
-                <i id="btnCancelAll-icon">close</i>
+                <i class="material-icons"id="btnCancelAll-icon">close</i>
             </div>
         </div>
 	</div>
     
-	<script src="res/js/jquery.min.js"></script>
-	<script src="res/js/bootstrap.min.js"></script>
-	<script src="res/js/styler.js"></script>
-	<script src="res/js/funConfigPanel.js"></script>
-	<script src="res/js/funMain.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+    <script src="js/splashStylerMobile.js"></script>
+    <script src="js/splashAnimations.js"></script>
+	
+	<script src="js/styler.js"></script>
+	<script src="js/funConfigPanel.js"></script>
+	<script src="js/funMain.js"></script>
 
 	
 </body>
