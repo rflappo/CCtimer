@@ -3,8 +3,8 @@ var mainDiv = document.getElementById('mainSplash');
 
 function responsiveStyler(){
     mainDiv.style.zIndex = 10;
-    splashHeight = window.innerHeight;
-    splashWidth = window.innerWidth;
+    splashHeight = screen.height;
+    splashWidth = screen.width;
     
     mainDiv.style.height = splashHeight + "px";
     mainDiv.style.width = splashWidth + "px";
