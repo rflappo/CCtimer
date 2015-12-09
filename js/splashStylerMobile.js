@@ -1,10 +1,17 @@
+function width(){
+   return window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth||0;
+}
+function height(){
+   return window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight||0;
+} // pongo aquí porque es el primero que se carga.
+
 var mainDiv = document.getElementById('mainSplash');
     var mainText = document.getElementById('mainText');
 
 function responsiveStyler(){
     mainDiv.style.zIndex = 10;
-    splashHeight = screen.height;
-    splashWidth = screen.width;
+    splashHeight = height();
+    splashWidth = width();
     
     mainDiv.style.height = splashHeight + "px";
     mainDiv.style.width = splashWidth + "px";

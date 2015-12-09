@@ -42,8 +42,8 @@ var configPanel = document.getElementById('configPanel');
 // Main DOM Elements
 
 function responsiveStyler(){
-    screenHeight = screen.height;
-    screenWidth = screen.width;
+    screenHeight = height();
+    screenWidth = width();
     if ((screenHeight <= 1024) && (screenWidth <= 768)) {
         if (screenHeight > screenWidth){
             mobilePortraitResponsiveStyler();
@@ -65,8 +65,8 @@ function mobilePortraitResponsiveStyler(){
     container1.classList.add("rotatePortrait");
     container2 = document.getElementById('container2');
 
-    containersHeight = screen.height /2;
-    containersWidth = screen.width;
+    containersHeight = height() /2;
+    containersWidth = width();
 
     container1.style.background = "#485c4c";// Azul copado : 484c5c
     container1.style.height = containersHeight + "px";
@@ -134,10 +134,10 @@ function mobilePortraitResponsiveStyler(){
 function mobilePortraitResponsiveConfigStyler(){
 //Generics
     
-    configPanel.style.left = screen.width + "px";
+    configPanel.style.left = width() + "px";
     
-    panelHeight = 3 * (screen.height / 5);
-    panelWidth = screen.width;
+    panelHeight = 3 * (height() / 5);
+    panelWidth = width();
     
 //configPanel - general -
     configPanel.style.height = panelHeight + "px";
