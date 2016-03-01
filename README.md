@@ -1,6 +1,6 @@
 # Chess Countdown Timer
 ### ... or CCtimer for short!
-
+[[https://github.com/rflappo/CCtimer/Screenshot.png]]
 ## Javascript?
 This is my first javascript project, and I hope it wont be the last one!.
 The main goal was to learn how to make a js app. I really had a lack of knowledge about web; CSS and JavaScript were tech I've been putting it behind but it was time for me to 'level up'!.
