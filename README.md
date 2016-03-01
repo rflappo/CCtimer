@@ -1,11 +1,11 @@
 # Chess Countdown Timer
 ### ... or CCtimer for short!
-[[https://github.com/rflappo/CCtimer/Screenshot.png]]
+![App Screen](https://github.com/rflappo/CCtimer/blob/master/Screenshot.png)
 ## Javascript?
 This is my first javascript project, and I hope it wont be the last one!.
 The main goal was to learn how to make a js app. I really had a lack of knowledge about web; CSS and JavaScript were tech I've been putting it behind but it was time for me to 'level up'!.
 With this project I learned the basic structure of a JS app. I did not use any kind of framework for the development, all my animation were made by using 'vanilla javascript'. It is true that you a see the jquery's script tag inside of the html5 template but that is just for the 'bootstrap' framework.
-```
+```javascript
  onExecutionTimer = setInterval(function (){
                                     if (timerToId === whitesSeconds.id){
 	                                    var secValue = Number(whitesSeconds.innerHTML);
